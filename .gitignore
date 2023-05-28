@@ -1,0 +1,10 @@
+
+# Devenv
+.devenv*
+devenv.local.nix
+
+.vscode
+
+# ocaml
+_build
+
