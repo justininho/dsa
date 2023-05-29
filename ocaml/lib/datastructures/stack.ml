@@ -30,8 +30,8 @@ let size stack = stack.size
 let to_list stack = 
   let rec append list node =
     match node.next with
-      | None -> node.value :: list
-      | Some(next) -> node.value :: append list next in
+    | None -> node.value :: list
+    | Some(next) -> node.value :: append list next in
   match stack.head with
-    | None -> []
-    | Some(node) -> append [] node
+  | None -> []
+  | Some(node) -> append [] node

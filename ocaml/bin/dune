@@ -1,4 +1,3 @@
 (executable
  (public_name dsalgo)
- (name main)
- (libraries lib))
+ (name main))

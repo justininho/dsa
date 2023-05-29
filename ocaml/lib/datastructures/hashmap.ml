@@ -35,7 +35,7 @@ let insert_no_resize key value map =
   if not (List.mem_assoc key bucket) then
     map.size <- map.size + 1
   
- (** [rehash map new_capacity] replaces the buckets array of [map] with a new
+(** [rehash map new_capacity] replaces the buckets array of [map] with a new
       array of size [new_capacity], and re-inserts all the bindings of [map]
       into the new array.  The keys are re-hashed, so the bindings will
       likely land in different buckets.
@@ -87,20 +87,6 @@ let remove k map =
 (** Efficiency: expected O(L) *)
 let find key map =
   List.assoc_opt key map.buckets.(index key map)
-
-(* Manual implementation *)
-(* let find key map =
-  let rec search_bucket k bucket =
-    match bucket with
-      | [] -> None
-      | (k', v) :: [] when k = k' -> Some(v)
-      | (k', v) :: t -> 
-        if k = k' then Some(v) else search_bucket k t in
-  let idx = (map.hash key) mod map.size in
-  let bucket = map.buckets.(idx) in
-    match bucket with
-    | [] -> None
-    | _ -> search_bucket key bucket *)
 
 (** [bindings m] is an association list containing the same bindings
   as [m]. *)

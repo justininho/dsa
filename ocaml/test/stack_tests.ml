@@ -1,4 +1,4 @@
-open Ds.Stack 
+open Ds.Stack
 open OUnit2
 let stack_tests () =
   let test_create _ =

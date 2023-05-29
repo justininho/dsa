@@ -49,16 +49,10 @@ let rec find bst value =
       else if value < v then find l value
       else true 
 
-let rec traverse bst = 
-  match bst with
-    | Leaf -> []
-    | Node(l, v, r) -> (traverse l) @ [v] @ (traverse r)
-
-(* let rec traverse bst printer =
+let rec traverse bst printer =
   match bst with
     | Leaf -> print_string "leaf"
-    (* | Node(l, v, r) -> (traverse l) @ [v] @ (traverse r) *)
     | Node(l, v, r) -> 
       traverse l printer;
       printer v;
-      traverse r printer *)
+      traverse r printer
