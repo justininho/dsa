@@ -1,4 +1,4 @@
-package datastructures
+package dsa
 
 import (
 	"fmt"
@@ -40,20 +40,3 @@ func (s *Stack[t]) Print() {
 	}
 	fmt.Println()
 }
-
-func main() {
-	s := NewStack[int]()
-	s.Push(1)
-	s.Print()
-	s.Push(2)
-	s.Print()
-	s.Push(3)
-	s.Print()
-	s.Pop()
-	s.Print()
-	s.Pop()
-	s.Print()
-	s.Pop()
-	// s.Push(2)
-}
-

@@ -1,4 +1,4 @@
-package datastructures
+package dsa
 
 import (
 	"testing"
