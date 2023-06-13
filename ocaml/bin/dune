@@ -1,3 +1,3 @@
 (executable
- (public_name dsalgo)
+ (public_name dsa)
  (name main))

@@ -1,3 +1,8 @@
 (tests
- (names stack_tests bst_tests hashmap_tests binary_search_tests)
- (libraries ounit2 ds algo))
+ (names
+  stack_tests
+  bst_tests
+  hashmap_tests
+  binary_search_tests
+  quicksort_tests)
+ (libraries ounit2 dsa))

@@ -1,5 +1,5 @@
 open OUnit2
-open Ds.Bst
+open Dsa.Bst
 
 let test_empty _ =
   let t = empty () in
