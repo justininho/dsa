@@ -1,4 +1,4 @@
-package dsa
+package quicksort
 
 func quicksort(arr []int) {
 	quicksortHelper(arr, 0, len(arr)-1)
@@ -18,16 +18,10 @@ func partition(arr []int, lo, hi int) int {
 	for j := lo; j < hi; j++ {
 		if arr[j] < pivot {
 			partition += 1
-			swap(arr, j, partition)
+			arr[partition], arr[j] = arr[j], arr[partition]
 		}
 	}
 	partition += 1
-	swap(arr, partition, hi)
+	arr[partition], arr[hi] = arr[hi], arr[partition]
 	return partition
-}
-
-func swap(arr []int, j, i int) {
-	temp := arr[j]
-	arr[j] = arr[i]
-	arr[i] = temp
 }
