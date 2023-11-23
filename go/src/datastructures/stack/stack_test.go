@@ -10,9 +10,21 @@ func TestStack(t *testing.T) {
 		t.Errorf("NewStack = %v; want = %v", s.Head, nil)
 	}
 
+	peek, ok := s.Peek()
+	if ok || peek != 0 {
+		t.Errorf("Peek = %v; want = %v", peek, 0)
+		t.Errorf("Ok = %v; want = %v", ok, false)
+	}
+
 	s.Push(1)
 	if s.Head.Value != 1 {
 		t.Errorf("Push = %v; want = %v", s.Head.Value, 1)
+	}
+
+	peek, ok = s.Peek()
+	if !ok || peek != 1 {
+		t.Errorf("Peek = %v; want = %v", peek, 1)
+		t.Errorf("Ok = %v; want = %v", ok, true)
 	}
 
 	length := s.Len()
@@ -25,6 +37,12 @@ func TestStack(t *testing.T) {
 		t.Errorf("Push = %v; want = %v", s.Head.Value, 2)
 	}
 
+	peek, ok = s.Peek()
+	if !ok || peek != 2 {
+		t.Errorf("Peek = %v; want = %v", peek, 2)
+		t.Errorf("Ok = %v; want = %v", ok, true)
+	}
+
 	length = s.Len()
 	if length != 2 {
 		t.Errorf("Len = %v; want = %v", length, 2)
@@ -35,6 +53,12 @@ func TestStack(t *testing.T) {
 		t.Errorf("Pop = %v; want = %v", value, 2)
 	}
 
+	peek, ok = s.Peek()
+	if !ok || peek != 1 {
+		t.Errorf("Peek = %v; want = %v", peek, 1)
+		t.Errorf("Ok = %v; want = %v", ok, true)
+	}
+
 	length = s.Len()
 	if length != 1 {
 		t.Errorf("Len = %v; want = %v", length, 1)
@@ -43,6 +67,12 @@ func TestStack(t *testing.T) {
 	value, ok = s.Pop()
 	if !ok || value != 1 {
 		t.Errorf("Pop = %v; want = %v", value, 1)
+	}
+
+	peek, ok = s.Peek()
+	if ok {
+		t.Errorf("Peek = %v; want = %v", peek, 0)
+		t.Errorf("Ok = %v; want = %v", ok, false)
 	}
 
 	length = s.Len()

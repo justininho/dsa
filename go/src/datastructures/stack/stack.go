@@ -17,11 +17,11 @@ type Stack[T any] struct {
 
 // New Creates a new Stack
 func New[T any]() *Stack[T] {
-	return &Stack[T]{Head: nil}
+	return &Stack[T]{}
 }
 
 // Peek returns the value of on top of the Stack without popping
-func (s Stack[T]) Peek() (T, bool) {
+func (s *Stack[T]) Peek() (T, bool) {
 	if head := s.Head; head != nil {
 		return s.Head.Value, true
 	}
@@ -47,7 +47,7 @@ func (s *Stack[T]) Pop() (T, bool) {
 }
 
 // Len returns the length of the Stack
-func (s Stack[T]) Len() int {
+func (s *Stack[T]) Len() int {
 	length, node := 0, s.Head
 	for node != nil {
 		length++
