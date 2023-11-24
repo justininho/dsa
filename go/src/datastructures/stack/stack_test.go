@@ -6,8 +6,8 @@ import (
 
 func TestStack(t *testing.T) {
 	s := New[int]()
-	if s.Head != nil {
-		t.Errorf("NewStack = %v; want = %v", s.Head, nil)
+	if s.head != nil {
+		t.Errorf("NewStack = %v; want = %v", s.head, nil)
 	}
 
 	peek, ok := s.Peek()
@@ -17,8 +17,8 @@ func TestStack(t *testing.T) {
 	}
 
 	s.Push(1)
-	if s.Head.Value != 1 {
-		t.Errorf("Push = %v; want = %v", s.Head.Value, 1)
+	if s.head.value != 1 {
+		t.Errorf("Push = %v; want = %v", s.head.value, 1)
 	}
 
 	peek, ok = s.Peek()
@@ -33,8 +33,8 @@ func TestStack(t *testing.T) {
 	}
 
 	s.Push(2)
-	if s.Head.Value != 2 {
-		t.Errorf("Push = %v; want = %v", s.Head.Value, 2)
+	if s.head.value != 2 {
+		t.Errorf("Push = %v; want = %v", s.head.value, 2)
 	}
 
 	peek, ok = s.Peek()
