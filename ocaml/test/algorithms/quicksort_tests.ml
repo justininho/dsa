@@ -1,5 +1,5 @@
 open OUnit2
-open Dsa.Quicksort
+open Algorithms.Quicksort
 
 let test_quicksort_array _ =
   let arr = [| 5; 3; 2; 4; 1 |] in

@@ -1,0 +1,3 @@
+(tests
+ (names binary_search_tests quicksort_tests)
+ (libraries ounit2 algorithms))

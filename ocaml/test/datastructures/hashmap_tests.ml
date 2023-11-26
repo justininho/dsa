@@ -1,5 +1,5 @@
 open OUnit2
-open Dsa.Hashmap
+open Datastructures.Hashmap
 
 let test_insert ctxt =
   let hash = Hashtbl.hash in

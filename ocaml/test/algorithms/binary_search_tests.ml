@@ -1,5 +1,5 @@
 open OUnit2
-open Dsa.Binary_search
+open Algorithms.Binary_search
 
 let test_found _ =
   let arr = [| 0; 1; 2; 3; 4; 5 |] in

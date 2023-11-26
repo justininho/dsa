@@ -1,5 +1,5 @@
 open OUnit2
-open Dsa.Stack
+open Datastructures.Stack
 
 let stack_tests () =
   let test_create _ =

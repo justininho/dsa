@@ -1,0 +1,4 @@
+(library
+ (name algorithms)
+ (public_name dsa)
+ (libraries base))

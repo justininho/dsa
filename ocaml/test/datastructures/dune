@@ -1,0 +1,3 @@
+(tests
+ (names stack_tests hashmap_tests bst_tests)
+ (libraries ounit2 datastructures))
