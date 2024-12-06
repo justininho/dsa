@@ -1,13 +1,13 @@
 package easy
 
 import (
-	"dsa/src/lc/medium"
+	. "dsa/src/lc/lib"
 )
 
 /*
 (104 | Easy) Maximum Depth of Binary Tree
 */
-func maxDepth(root *medium.TreeNode) int {
+func maxDepth(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
